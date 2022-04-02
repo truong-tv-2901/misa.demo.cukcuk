@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./resources/fontawesome-free-5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/addemployee.css">
+
+</head>
+
+<body>
+    <div class="menu">
+        <div class="logo-bar">
+            <div class="logo"></div>
+            <div class="logo-content"></div>
+        </div>
+        <div class="menu-section">
+            <div class="section">
+                <div class="item-menu icon-board"></div>
+                <div class="content-menu ">
+                    Tổng quan
+                </div>
+            </div>
+            <div class="section">
+                <div class="item-menu icon-report"></div>
+                <div class="content-menu">
+                    Báo cáo
+                </div>
+            </div>
+            <div class="section">
+                <div class="item-menu"></div>
+                <div class="content-menu">
+                    Mua hàng
+                </div>
+            </div>
+            <div class="section">
+                <div class="item-menu icon-employee"></div>
+                <div class="content-menu">
+                    Danh mục nhân viên
+                </div>
+            </div>
+            <div class="section">
+                <div class="item-menu icon-employee"></div>
+                <div class="content-menu ">
+                    Danh mục Nhân viên
+                </div>
+            </div>
+            <div class="section">
+                <div class="item-menu icon-setting"></div>
+                <div class="content-menu">
+                    Thiết lập hệ thống
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content-header">
+            <div class="name-company">
+                <span><i class="icon-company"></i></span>
+                <h3>Nhà hàng Biển Đông</h3>
+
+            </div>
+            <div class="name-employee">
+                <span><i class="icon-employee" ></i></span>
+                <p><strong>Trương Văn Trường</strong></p>
+                <span><i class="icon-option" ></i></span>
+
+            </div>
+        </div>
+        <div class="content-body">
+            <div class="toolbar">
+                <h1>Danh sách nhân viên</h1>
+                <button id="btnAdd"><i class="icon-add"></i>Thêm Nhân viên</button>
+            </div>
+            <div class="grid-content">
+                <div class="search">
+                    <span><i class="icon-search"></i></span>
+                    <input type="search" id="search" placeholder="Tìm kiếm theo mã,tên hoặc số điện thoại" />
+                    <div style="z-index: 1;">
+                        <div class="department xng">
+                            <div class="departmentName">Tất cả Phòng ban</div>
+                            <div class="dr-X"></div>
+                            <div class="dr-arrow"></div>
+                        </div>
+                        <div class="departmentItem">
+                            <div class="dr-item">
+                                <div class="icon"></div>
+                                <div class="text">Phòng kế toán</div>
+                            </div>
+                            <div class="dr-item">
+                                <div class="icon"></div>
+                                <div class="text">Phòng nhân sự</div>
+                            </div>
+                            <div class="dr-item">
+                                <div class="icon"></div>
+                                <div class="text">Phòng tài chính</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="z-index: 1;">
+                        <div class="position xng">
+                            <div class="positionName">Tất cả vị trí</div>
+                            <div class="po-X"></div>
+                            <div class="po-arrow"></div>
+                        </div>
+                        <div class="positionItem">
+                            <div class="po-item">
+                                <div class="icon"></div>
+                                <div class="text">Giasm đốc</div>
+                            </div>
+                            <div class="po-item">
+                                <div class="icon"></div>
+                                <div class="text">Nhân viên</div>
+                            </div>
+                            <div class="po-item">
+                                <div class="icon"></div>
+                                <div class="text">Kế toán</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="grid-table">
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Mã nhân viên</th>
+                                <th>Họ Và Tên</th>
+                                <th>Giới Tính</th>
+                                <th>Ngày Sinh</th>
+                                <th>Điện Thoại</th>
+                                <th>Email</th>
+                                <th>Chức Vụ</th>
+                                <th>Phòng Ban</th>
+                                <th>Mức lương cơ bản</th>
+                                <th>Tình trạng công việc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer">
+                    <p>
+                        Hiển thị 1-19/1000 nhân viên
+                    </p>
+                    <div class="pagings">
+                        <button class="button-navigate icon-32 button-firstpage"></button>
+                        <button class="button-navigate icon-32 button-prev-page"></button>
+                        <button class="button-navigate icon-32 button-page">1</button>
+                        <button class="button-navigate icon-32 button-nextpage"></button>
+                        <button class="button-navigate icon-32 button-lastpage"></button>
+                    </div>
+                    <p id="page1">
+                        10 nhân viên/trang
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-view"></div>
+        <div class="addEmployee">
+            <div class="dialog-title">
+                Thông Tin Nhân Viên
+                <button class="btnCancle"></button>
+            </div>
+            <div class="dialog-body">
+                <div class="dialog-employee">
+                    <div class="avatar-employee">
+                        <div class="avatar"></div>
+
+                        <p>(Vui lòng chọn ảnh có định dạng .jpg,.jpeg,.png,.gif)</p>
+                    </div>
+                    <div class="infor-employee">
+
+                        <div class="textInfor">
+                            A.Thông Tin Chung:
+                            <div class="green-text">
+
+                            </div>
+                        </div>
+                        <div class="grid-infor">
+                            <div class="employeeCode inp">
+                                <label>Mã Nhân viên(<span style="color: red;">*</span>)</label>
+                                <input type="text" class="txtEmployeeCode textbox" style="margin-right: 10px;" required>
+                            </div>
+                            <div class="employeeName inp">
+                                <label>Họ Và Tên(<span style="color: red;">*</span>)</label>
+                                <input type="text" required class="txtEmployeeName textbox">
+                            </div>
+                        </div>
+                        <div class="grid-infor">
+                            <div class="date inp">
+                                <label>Ngày sinh</label>
+                                <input type="date" class="txtDate textbox" style="margin-right: 10px;">
+                            </div>
+                            <div class="gender inp">
+                                <label>Giới tính</label>
+                                <div class="txtGender">
+                                    <div class="genderText">Chưa chọn</div>
+                                    <div class="genderArrow"></div>
+                                </div>
+                                <div class="genderItem">
+                                    <div class="gender-item">
+                                        <div class="gender-icon"></div>
+                                        <div class="gender-text">Nam</div>
+                                    </div>
+                                    <div class="gender-item">
+                                        <div class="gender-icon"></div>
+                                        <div class="gender-text">Nữ</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="grid-infor">
+                            <div class="CMTND inp">
+                                <label>Số CMTND/Căn cước(<span style="color: red;">*</span>)</label>
+                                <input type="text" class="txtCMTND textbox" style="margin-right: 10px;" required>
+                            </div>
+                            <div class="dateCMTND inp">
+                                <label>Ngày cấp</label>
+                                <input type="date" class="txtDateCMTND textbox">
+                            </div>
+                        </div>
+                        <div class="grid-infor">
+                            <div class="CMT-Location inp">
+                                <label>Nơi cấp</label>
+                                <input type="text" class="txtLocationCmt textbox" style="margin-right: 10px;">
+                            </div>
+
+                        </div>
+                        <div class="grid-infor">
+                            <div class="Email inp">
+                                <label>Email(<span style="color: red;">*</span>)</label>
+                                <input type="email" class="txtEmail textbox" style="margin-right: 10px;" required>
+                            </div>
+                            <div class="Phone inp">
+                                <label>Số điện thoại(<span style="color: red;">*</span>)</label>
+                                <input type="text" class="txtPhone textbox" required>
+                            </div>
+                        </div>
+                        <div class="textInfor">
+                            A.Thông Tin Công Việc:
+                            <div class="green-text">
+
+                            </div>
+                        </div>
+                        <div class="grid-infor">
+                            <div class="location inp">
+                                <label>Vị trí</label>
+                                <div class="txtGender">
+                                    <div class="LocationText"> Gíam đốc</div>
+                                    <div class="LocationArrow">
+                                        <button></button>
+                                    </div>
+                                </div>
+                                <!-- <div class = "genderItem"></div> -->
+                            </div>
+
+                            <div class="department inp">
+                                <label>Phòng ban</label>
+                                <div class="txtdepartment">
+                                    <div class="departmentText">Phòng nhân sự</div>
+                                    <div class="DepartmentArrow">
+                                        <button></button>
+                                    </div>
+                                </div>
+                                <!-- <div class = "genderItem"></div> -->
+                            </div>
+
+                        </div>
+                        <div class="grid-infor">
+                            <div class="Email inp">
+                                <label>Mã số thuế cá nhân</label>
+                                <input type="number" class="txxTaxcode textbox" style="margin-right: 10px;">
+                            </div>
+                            <div class="Phone inp">
+                                <label>Mức lương cơ bản </label>
+                                <input type="text" class="txtSalary textbox">
+                            </div>
+                        </div>
+                        <div class="grid-infor">
+                            <div class="dateCompany inp">
+                                <label>Ngày gia nhập công ty</label>
+                                <input type="date" class="txtDateCompany textbox" style="margin-right: 10px;">
+                            </div>
+                            <div class="work inp">
+                                <label>Tình Trang công việc</label>
+                                <div class="txtGender">
+                                    <div class="workText">Đang làm việc</div>
+                                    <div class="WorkArrow">
+                                        <button></button>
+                                    </div>
+                                </div>
+                                <!-- <div class = "genderItem"></div> -->
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="dialog-footer">
+                    <button class="button-cancle">Hủy</button>
+                    <button class="button-save">Lưu</button>
+                </div>
+            </div>
+        </div>
+        <!-- phần thư viện  -->
+        <script src="../js/jquery-3.6.0.min.js"></script>
+
+        <!-- phần dùng chung -->
+        <script src="../js/Enumeration.js"></script>
+        <script src="../js/Resource.js"></script>
+        <script src="../js/CommonFn.js"></script>
+
+        <script src="../js/employees.js"></script>
+        <script src="../js/dropdown.js"></script>
+
+</body>
+
+</html>
